@@ -1,0 +1,22 @@
+{
+  "name": "breadit",
+  "version": "1.0.0",
+  "description": "Detect different types of bread",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yammani23/breadit.git"
+  },
+  "keywords": [
+    "bread"
+  ],
+  "author": "Yammani Shah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yammani23/breadit/issues"
+  },
+  "homepage": "https://github.com/Yammani23/breadit#readme"
+}
