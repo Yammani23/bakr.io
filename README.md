@@ -1,12 +1,11 @@
 # breadit
 This is a personal project by Yammani Shah
 
-# Setup
 
 ## Setup
 
 
-### Intro to Node
+## Intro to Node
 nvm = version manager
 
 npm = package manager
@@ -15,7 +14,7 @@ node = execuiton engine
 
 
 
-### Linux Commands
+## Linux Commands
 
 - go back in directory
  ` cd ..`
@@ -61,7 +60,7 @@ git log = list all changes/updates to main
 
 JS
 
-####Data Types:
+### Data Types:
 
 - Boolean
     - true/false, 1/0
@@ -86,7 +85,7 @@ JS
     - Access element by dictionary_name[”key_name”]
     
 
-####Syntax:
+### Syntax:
 
 - Functions definitions
     - 
@@ -140,7 +139,7 @@ JS
     ```
     
 
-####Key Words:
+### Key Words:
 
 - var = define variables
     - var variable_name = 5
