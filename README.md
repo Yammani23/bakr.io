@@ -32,8 +32,6 @@ which git = search path for 'git' an dopens main branch
 
 man git =
 
-git checkout -b init =  creates new branch from main branch 
-
 npm init = walks through creating the packet manager
 
 code . = 
@@ -42,7 +40,11 @@ node src ... = run
 
 git status =
 
+
+
+
 Git Commands
+ls = list all in directory
 
 git pull = pull latest changes 
 
@@ -50,7 +52,7 @@ git status =
 
 git checkout -b <branch_name>=  creates new branch from main branch 
 
-git checkout <branch_name> = switch branches
+git checkout <branch_name> = switch br  anches
 
 git branch -l = list local branches
 
@@ -58,9 +60,14 @@ git branch -r = list remote branches
 
 git log = list all changes/updates to main
 
-JS
 
-### Data Types:
+
+
+
+
+### JS
+
+#### Data Types:
 
 - Boolean
     - true/false, 1/0
@@ -85,7 +92,7 @@ JS
     - Access element by dictionary_name[”key_name”]
     
 
-### Syntax:
+#### Syntax:
 
 - Functions definitions
     - 
@@ -139,7 +146,7 @@ JS
     ```
     
 
-### Key Words:
+#### Key Words:
 
 - var = define variables
     - var variable_name = 5
