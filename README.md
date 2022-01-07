@@ -38,12 +38,11 @@ code . =
 
 node src ... = run
 
-git status =
 
 
 
 
-Git Commands
+## Git Commands
 ls = list all in directory
 
 git pull = pull latest changes 
