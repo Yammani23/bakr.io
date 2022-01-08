@@ -27,6 +27,7 @@ const app = express(); //create a web application
 //plugins for the web application
 app.use(express.urlencoded());
 app.use(expressFileUpload());
+app.use(express.static(path.join(__dirname, "public")))
 
 // define web paths and request handlers
 app.get("/", function (req, res) {

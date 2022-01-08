@@ -1,25 +1,32 @@
 <html>
   <head>
     <title>Upload file</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
-      <div><h1>Upload files here</h1>
-
-      </div>
-      <div>
+    <div class="container">
+      <div class="form_container">
+        <div><h1>Upload files here</h1></div>
+        <div>
           <h2>Where you can discover if a file contains bread or not</h2>
-      </div>
-      <div>
-          <form action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data">
-              <label>Input File</label>
-              <input type="file" name="input_file"> 
-              <input type="submit" value="Submit">
+        </div>
+        <div>
+          <form
+            action="http://localhost:3000/upload"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <label>Input File</label>
+            <input type="file" name="input_file" />
+            <input type="submit" value="Submit" />
           </form>
-      </div>
-      <div>
+        </div>
+        <div>
           <form>
-              <label></label>
+            <label></label>
           </form>
+        </div>
       </div>
-    </body>
+    </div>
+  </body>
 </html>
