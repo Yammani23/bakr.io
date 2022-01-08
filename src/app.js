@@ -8,31 +8,55 @@ function hasBread(testString) {
     "bread",
   ];
   const splitString = testString.split(" ");
-  for (var item in splitString) {
-    if (breadTypes.indexOf(splitString[item].toLowerCase()) > -1) {
-      hasBread = splitString[item];
-
+  for (var index in splitString) {
+    // check if each word is on breadTypes
+    if (breadTypes.indexOf(splitString[index].toLowerCase()) > -1) {
+      hasBread = splitString[index];
     }
   }
 
-  return hasBread
+  return hasBread;
 }
 
-const express = require("express");
-const path = require("path");
-const app = express();
-app.use(express.urlencoded());
+const express = require("express"); //import excess package
+const path = require("path"); //import path package
+const expressFileUpload = require("express-fileupload");
 
+const app = express(); //create a web application
+
+//plugins for the web application
+app.use(express.urlencoded());
+app.use(expressFileUpload());
+
+// define web paths and request handlers
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "ui/views/bread.html"));
 });
 
+//
 app.post("/bread", function (req, res) {
-  const breadName = hasBread(req.body["input_string"]);
+  const data = req.body["input_string"];
+  const breadName = hasBread(data);
   if (breadName) {
-    res.send("There is " + breadName);
+    res.send("HAS BREAD. The text has " + breadName);
   } else {
-    res.send("There is no bread");
+    res.send("DOESN'T HAVE BREAD.");
+  }
+});
+
+//
+app.get("/file", function (req, res) {
+  res.sendFile(path.join(__dirname, "ui/views/upload.html"));
+});
+
+// recieve data from upload
+app.post("/upload", function (req, res) {
+  const data = req.files.input_file["data"].toString("utf-8").trim();
+  const breadName = hasBread(data);
+  if (breadName) {
+    res.send("Has Bread. " + breadName);
+  } else {
+    res.send("There is no bread.");
   }
 });
 
