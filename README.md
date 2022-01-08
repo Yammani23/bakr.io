@@ -1,4 +1,4 @@
-# breadit
+# Bakr.io
 This is a personal project by Yammani Shah
 
 #### Express 
@@ -8,9 +8,6 @@ This is a personal project by Yammani Shah
 - [NodeJS installation](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows)
 - [Express installation](https://www.npmjs.com/package/express)
 - 
-
-https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows
-
 
 ## Intro to Node
 nvm = version manager
@@ -48,7 +45,7 @@ node = execuiton engine
 `  `
 
 - npm init 
-`walks through creating the packet manager`
+`walks through creating the packet manager, package.json file`
 
 - code . 
 `begin coding`
