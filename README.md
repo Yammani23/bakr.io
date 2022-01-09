@@ -21,20 +21,22 @@ Alternatively users can specify the bread names to search for.
 ## Npm Setup Instructions
 - [NodeJS installation](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows)
 - [Express installation](https://www.npmjs.com/package/express)
+- [Express File upload](https://www.npmjs.com/package/express-fileupload)
+- [Pug installation](https://www.npmjs.com/package/pug)
 
 
 ## Intro to Node
 Node is a server side JavaSrcipt runtime engine. It is used to run JS code outside of the browser. Node packages can be installed using the Node package manger called `npm`. Different node versions can be installed using the Node version manager, `nvm`.
 
-# Refrences
+# References
 
 ## Linux Commands
 
 - go back in directory
  ` cd ..`
  
- - mkdir <dir_name>
- `make directory`
+- make directory
+ `mkdir <dir_name>`
 
 - change directory to ...
 `cd <folder name>`
@@ -45,48 +47,48 @@ Node is a server side JavaSrcipt runtime engine. It is used to run JS code outsi
 - show location of program
 `which`
 
-- pwd 
-`pathway directory`
+- pathway directory
+`pwd`
 
-- which git 
-`search path for 'git' an dopens main branch`
+- search path for 'git' an dopens main branc
+`which git`
 
-- man git 
-`  `
+- walks through creating the packet manager, package.json file
+`npm init`
 
-- npm init 
-`walks through creating the packet manager, package.json file`
+- begin coding
+`code .`
 
-- code . 
-`begin coding`
 
 - node src ... 
 `run`
 
 ## Git Commands
-- git clone
+- make clone of repo
+`git clone`
 
 
-- git pull
-`pull latest changes`
+- pull latest changes
+`git pull`
 
-- git status 
-`Check for changes`
+- Check for changes
+`git status`
 
-- git checkout -b <branch_name>
-`creates new branch from main branch `
+- creates new branch from main branch 
+`git checkout -b <branch_name>`
 
-- git checkout <branch_name> 
-`switch br  anches`
+- switch branches
+`git checkout <branch_name>`
 
-- git branch -l 
-`list local branches`
 
-- git branch -r 
-`list remote branches `
+- list local branches
+`git branch -l`
 
-- git log 
-`list all changes/updates to main`
+- list remote branches
+`git branch -r `
+
+- list all changes/updates to main
+`git log `
 
 
 ## JS
