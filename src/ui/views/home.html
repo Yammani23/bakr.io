@@ -14,12 +14,14 @@
         <div>
           <form action="http://localhost:3000/bread" method="POST">
             <label>Input String</label>
-            <input
-              type="text"
-              name="input_string"
-              placeholder="Type your sentence here"
-            />
-            <input type="submit" value="Submit" />
+            <input type="text" name="input_string" placeholder="Type your sentence here"/>
+            <div>
+            <label>Enter your bread type here seperated by spaces</label>
+            <input type="text" name="input_bread_types"  placeholder="If empty text is comapred against sourdough, ciabatta, rye, bread"/>
+            <div>
+            <input type="submit" value="Submit"/>
+            </div>
+            </form>
           </form>
         </div>
         <div>

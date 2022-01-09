@@ -1,47 +1,52 @@
-function hasBread(testString) {
-  var hasBread = null;
-  const breadTypes = [
-    //array for existing bread tyoes
-    "sourdough",
-    "ciabatta",
-    "rye",
-    "bread",
-  ];
+function hasBread(testString, breadTypesInput) {
+  var breadName = null;
+  var breadTypes = null;
+  const breadTypesDefault = ["sourdough", "ciabatta", "rye", "bread"];
+
+  if (breadTypesInput == null || breadTypesInput == "") {
+    breadTypes = breadTypesDefault;
+  } else {
+    breadTypes = breadTypesInput.toLowerCase().split(" ");
+  }
   const splitString = testString.split(" ");
   for (var index in splitString) {
-    // check if each word is on breadTypes
+    // check if each array element mtaches breadTypes
+    /* if the constant breadTypes locates a matching value in the array 
+    splitstring (where every element is truned into lowecase) though the use of the function .indexOf */
     if (breadTypes.indexOf(splitString[index].toLowerCase()) > -1) {
-      hasBread = splitString[index];
+      breadName = splitString[index];
     }
   }
 
-  return hasBread;
+  return breadName;
 }
 
 const express = require("express"); //import excess package
 const path = require("path"); //import path package
-const expressFileUpload = require("express-fileupload");
+const expressFileUpload = require("express-fileupload"); //import excess-fileupliad package
 
 const app = express(); //create a web application
 
 //plugins for the web application
-app.use(express.urlencoded());
-app.use(expressFileUpload());
-app.use(express.static(path.join(__dirname, "public")))
+app.use(express.urlencoded()); // middleware to recgonise the incoming Request objects such as POST/PUT requests
+app.use(expressFileUpload()); // Express framework which is used to handle files
+app.use(express.static(path.join(__dirname, "public"))); //allows the style.css page to work with every html page
 
 // define web paths and request handlers
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "ui/views/bread.html"));
+  res.sendFile(path.join(__dirname, "ui/views/home.html")); //
 });
 
 //
 app.post("/bread", function (req, res) {
+  //ADDINPUT BREAD
   const data = req.body["input_string"];
-  const breadName = hasBread(data);
+  const breadTypes = req.body["input_bread_types"];
+  const breadName = hasBread(data, breadTypes);
   if (breadName) {
-    res.send("HAS BREAD. The text has " + breadName);
+    res.sendFile(path.join(__dirname, "ui/views/has_bread.html"));
   } else {
-    res.send("DOESN'T HAVE BREAD.");
+    res.sendFile(path.join(__dirname, "ui/views/has_no_bread.html"));
   }
 });
 
