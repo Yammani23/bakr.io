@@ -1,22 +1,32 @@
 # Bakr.io
 This is a personal project by Yammani Shah
 
-#### Express 
-`Express is a web application framework which provides robust features to develop web and mobile applications. It is used in this project 
+## Description
+This is a web appliaction using the express web framework. Users can either type in a sentence or upload a file with sentences to test for specific bread words. The app by default checks for the following bread names:
 
-## Setup
+  `bread, rye, ciabatta, sourdough`
+  
+Alternatively users can specify the bread names to search for.
+
+## Running the code
+* Clone the repository
+  * `git clone https://github.com/Yammani23/bakr.io.git`
+* Change into bakr.io directory
+  * `cd bakr.io`
+* Install npm packages
+  * `npm install`
+* Run dev server
+  * `npm run dev`
+
+## Npm Setup Instructions
 - [NodeJS installation](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows)
 - [Express installation](https://www.npmjs.com/package/express)
-- 
+
 
 ## Intro to Node
-nvm = version manager
+Node is a server side JavaSrcipt runtime engine. It is used to run JS code outside of the browser. Node packages can be installed using the Node package manger called `npm`. Different node versions can be installed using the Node version manager, `nvm`.
 
-npm = package manager
-
-node = execuiton engine
-
-
+# Refrences
 
 ## Linux Commands
 
@@ -29,11 +39,11 @@ node = execuiton engine
 - change directory to ...
 `cd <folder name>`
 
-- ls 
-`list all in directory`
+- list all in directory
+`ls`
 
-- which 
-`show commands`
+- show location of program
+`which`
 
 - pwd 
 `pathway directory`
@@ -53,13 +63,9 @@ node = execuiton engine
 - node src ... 
 `run`
 
-
-
-
 ## Git Commands
+- git clone
 
-- ls 
-`list all in directory`
 
 - git pull
 `pull latest changes`
@@ -83,13 +89,9 @@ node = execuiton engine
 `list all changes/updates to main`
 
 
-
-
-
-
 ## JS
 
-#### Data Types:
+### Data Types:
 
 - Boolean
     - `true/false, 1/0`
@@ -114,7 +116,7 @@ node = execuiton engine
     - `Access element by dictionary_name[”key_name”]`
     
 
-#### Syntax:
+### Syntax:
 
 - Functions definitions
     ```jsx
@@ -164,11 +166,4 @@ node = execuiton engine
     	//code block
     }
     ```
-    
-
-#### Key Words:
-
-- var = define variables
-    - var variable_name = 5
-    - var 
 
