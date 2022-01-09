@@ -32,6 +32,10 @@ app.use(express.urlencoded()); // middleware to recgonise the incoming Request o
 app.use(expressFileUpload()); // Express framework which is used to handle files
 app.use(express.static(path.join(__dirname, "public"))); //allows the style.css page to work with every html page
 
+// set view engine to pug
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "ui/views"));
+
 // define web paths and request handlers
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "ui/views/home.html")); //
@@ -39,18 +43,20 @@ app.get("/", function (req, res) {
 
 //
 app.post("/bread", function (req, res) {
-  //ADDINPUT BREAD
   const data = req.body["input_string"];
   const breadTypes = req.body["input_bread_types"];
   const breadName = hasBread(data, breadTypes);
   if (breadName) {
-    res.sendFile(path.join(__dirname, "ui/views/has_bread.html"));
+    res.render("has_bread", {
+      pageTitle: "This has " + breadName,
+      breadName: breadName,
+    });
   } else {
     res.sendFile(path.join(__dirname, "ui/views/has_no_bread.html"));
   }
 });
 
-//
+
 app.get("/file", function (req, res) {
   res.sendFile(path.join(__dirname, "ui/views/upload.html"));
 });
@@ -58,11 +64,15 @@ app.get("/file", function (req, res) {
 // recieve data from upload
 app.post("/upload", function (req, res) {
   const data = req.files.input_file["data"].toString("utf-8").trim();
-  const breadName = hasBread(data);
+  const breadTypes = req.body["input_bread_types"];
+  const breadName = hasBread(data, breadTypes);
   if (breadName) {
-    res.send("Has Bread. " + breadName);
+    res.render("has_bread", {
+      pageTitle: "This has " + breadName,
+      breadName: breadName,
+    });
   } else {
-    res.send("There is no bread.");
+    res.sendFile(path.join(__dirname, "ui/views/has_no_bread.html"));
   }
 });
 

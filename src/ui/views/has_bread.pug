@@ -1,0 +1,12 @@
+html 
+  head 
+    title= pageTitle 
+    link(rel="stylesheet", href="style.css", type="text/css")
+
+  body 
+    #main.container
+      #body.body_container
+        h1 The type of bread found is 
+        h1.bread_found= breadName 
+        img.bread_image(src='bread_art.png')
+        
